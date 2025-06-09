@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+       <style>
+    body {
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .flor {
+      width: 300px;
+      opacity: 0;
+      animation: aparecer 2s ease-in-out forwards;
+    }
+
+    .mensagem {
+      opacity: 0;
+      animation: mostrarTexto 2s ease forwards;
+      animation-delay: 3s;
+      font-size: 24px;
+      color: #b71c1c;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    @keyframes aparecer {
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes mostrarTexto {
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+
+<body>
+   
+ 
+  <img class="flor" src="buque_de_rosas_brancas_permanentes_32cm_3829_1_bccb4bfc18a0cb1f69c6664f2c8ff60f_20210804112102.webp" alt="Rosa desabrochando">
+
+  <div class="mensagem">Para você, com carinho 🌹</div>
+
+  <audio id="somFlor" src="https://cdn.pixabay.com/audio/2022/03/15/audio_d001f23641.mp3"></audio>
+
+  <script>
+    window.addEventListener('load', () => {
+      const som = document.getElementById('somFlor');
+      som.play().catch(() => console.log('Som bloqueado pelo navegador.'));
+    });
+  </script>
+
+</body>
+</html>
